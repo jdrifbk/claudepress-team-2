@@ -114,7 +114,7 @@ Commit piccoli, messaggi in inglese in formato conventional commit.
 
 - **nome**: da compilare
 
-## Regole aggiunte dal team
+## Regole aggiunte dal teamssss
 
 <!-- TODO: si riempie strada facendo, non adesso.
 
@@ -128,3 +128,5 @@ Commit piccoli, messaggi in inglese in formato conventional commit.
 
      Esempio della forma inutile:
        Attenzione alla cache. -->
+
+TEST
