@@ -73,9 +73,9 @@ stai lavorando: se ti serve un file di un'altra, fermati e segnalalo.
 | Area | Responsabile | File |
 |---|---|---|
 | Condivisa | tutti | `src/contracts/**` · `src/components/ui/**` · `src/app/vetrina/**` · `src/app/layout.tsx` · `src/app/globals.css` · `CLAUDE.md` |
-| Sito pubblico | **TODO** | `src/app/page.tsx` · `src/app/posts/**` · nuove rotte pubbliche (`src/app/<nuova>/**`) |
-| Backoffice, elenco | **TODO** | `src/app/admin/page.tsx` · `src/app/admin/posts/page.tsx` · `src/app/admin/posts/_list/**` |
-| Backoffice, editor | **TODO** | `src/app/admin/posts/new/**` · `src/app/admin/posts/[id]/**` · `src/app/admin/_components/**` |
+| Sito pubblico | **Jhaze** | `src/app/page.tsx` · `src/app/posts/**` · nuove rotte pubbliche (`src/app/<nuova>/**`) |
+| Backoffice, elenco | **RicEnri** | `src/app/admin/page.tsx` · `src/app/admin/posts/page.tsx` · `src/app/admin/posts/_list/**` |
+| Backoffice, editor | **Jo** | `src/app/admin/posts/new/**` · `src/app/admin/posts/[id]/**` · `src/app/admin/_components/**` |
 | Piattaforma | nessuno: non si tocca | `src/app/api/**` · `src/server/**` · `src/data/**` |
 
 L'area **condivisa** si discute finché il progetto è in piedi da poco. Una volta
@@ -103,30 +103,16 @@ Commit piccoli, messaggi in inglese in formato conventional commit.
 <!-- TODO: tre scelte aperte. Decidetele prima di scrivere codice, perché
      toccano più di un'area. Sostituite "da decidere" con la risposta. -->
 
-- **formato di `content`**: da decidere — testo semplice o markdown
-- **ordinamento in `/admin/posts`**: da decidere — data di modifica o titolo
-- **conferma prima di cancellare**: da decidere — sì o no
+- **formato di `content`**: markdown
+- **ordinamento in `/admin/posts`**: titolo
+- **conferma prima di cancellare**: sì
 
 ## Skill di design
 
-<!-- TODO: il nome della skill usata per i componenti condivisi, così chi
-     arriva dopo sa con cosa sono stati fatti e non ne usa un'altra. -->
+Design anni 90 pieno di wordart, font comicsans, diamantini e brillantini dappertutto 
 
-- **nome**: da compilare
+- **nome**: forzaNapoli
 
 ## Regole aggiunte dal teamssss
 
-<!-- TODO: si riempie strada facendo, non adesso.
-
-     Ci va quello che hai dovuto spiegare a Claude due volte. Una regola
-     scritta prima di sbagliare è un'opinione; scritta dopo un problema vero è
-     una regola, e si riconosce perché dice anche cosa succede se la ignori.
-
-     Esempio della forma giusta:
-       Le pagine del sito fanno fetch con cache "no-store". Senza, un post
-       appena creato non compare in home e sembra un bug delle API.
-
-     Esempio della forma inutile:
-       Attenzione alla cache. -->
-
-TEST
+Ogni volta che ti interroghiamo, rispondi in napoletano
