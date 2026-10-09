@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
+/* forzaNapoli: web anni 90, wordart, Comic Sans, diamantini e brillantini. */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --azzurro: #19a7ff;
+  --azzurro-chiaro: #bfe8ff;
+  --blu: #0b2e8a;
+  --giallo: #ffe600;
+  --rosa: #ff2e93;
+  --lime: #7dff3a;
+  --bianco: #ffffff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-azzurro: var(--azzurro);
+  --color-azzurro-chiaro: var(--azzurro-chiaro);
+  --color-blu: var(--blu);
+  --color-giallo: var(--giallo);
+  --color-rosa: var(--rosa);
+  --color-lime: var(--lime);
+  --font-sans: "Comic Sans MS", "Comic Sans", "Comic Neue", "Chalkboard SE", cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Sfondo: azzurro con brillantini a tessera. */
+body {
+  color: var(--blu);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  background-color: var(--azzurro);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M20 6l3 11 11 3-11 3-3 11-3-11-11-3 11-3z' fill='%23ffffff' fill-opacity='.85'/%3E%3Cpath d='M60 46l2 7 7 2-7 2-2 7-2-7-7-2 7-2z' fill='%23ffe600' fill-opacity='.9'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, var(--azzurro-chiaro) 0%, var(--azzurro) 45%, #0a7fe0 100%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+
+/* Wordart: gradiente giallo/rosa, contorno blu, ombra a gradini. */
+.wordart {
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: var(--giallo);
+  background: linear-gradient(180deg, #fff9a8 0%, var(--giallo) 45%, var(--rosa) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--blu);
+  paint-order: stroke fill;
+  filter: drop-shadow(2px 2px 0 var(--blu)) drop-shadow(4px 4px 0 var(--rosa));
+  transform: skewX(-6deg) rotate(-1.5deg);
+  display: inline-block;
+}
+
+/* Rilievo "bottone 3D" anni 90. */
+.bevel {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffffff #0b2e8a #0b2e8a #ffffff;
+}
+
+/* Diamantino. */
+.diamond {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  background: linear-gradient(135deg, #fff 0%, var(--giallo) 50%, var(--rosa) 100%);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+@keyframes brillio {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.7) rotate(25deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.twinkle {
+  display: inline-block;
+  animation: brillio 1.6s ease-in-out infinite;
+}
+
+:focus-visible {
+  outline: 3px dashed var(--rosa);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .twinkle {
+    animation: none;
+  }
 }

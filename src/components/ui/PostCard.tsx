@@ -10,13 +10,19 @@ export function PostCard({ title, excerpt, author, date, href }: PostCardProps) 
   return (
     <a
       href={href}
-      className="block rounded-lg border border-gray-200 p-5 transition-shadow hover:shadow-md"
+      className="bevel block rounded-2xl bg-white p-5 shadow-[6px_6px_0_#0b2e8a] transition-transform hover:-translate-y-0.5 hover:bg-yellow-50"
     >
-      <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-      <p className="mt-2 text-sm text-gray-600">{excerpt}</p>
-      <div className="mt-4 text-xs text-gray-500">
+      <h3 className="text-xl font-black text-blu">
+        <span className="twinkle mr-1 text-rosa" aria-hidden="true">
+          ✦
+        </span>
+        {title}
+      </h3>
+      <p className="mt-2 text-sm text-slate-700">{excerpt}</p>
+      <div className="mt-4 flex items-center gap-2 text-xs font-bold text-blu">
+        <span className="diamond" aria-hidden="true" />
         <span>{author}</span>
-        <span className="mx-1">·</span>
+        <span className="diamond" aria-hidden="true" />
         <time dateTime={date}>{dataFormattata}</time>
       </div>
     </a>

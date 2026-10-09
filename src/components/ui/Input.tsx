@@ -9,8 +9,8 @@ export function Input({
   placeholder,
   invalid = false,
 }: InputProps) {
-  const styles = `w-full rounded-lg border px-3 py-2 text-sm ${
-    invalid ? "border-red-600" : "border-gray-300"
+  const styles = `w-full rounded-lg border-[3px] bg-white px-3 py-2 text-sm text-blu placeholder:text-sky-500 shadow-[inset_2px_2px_0_#bfe8ff] ${
+    invalid ? "border-rosa" : "border-blu"
   }`;
 
   if (multiline) {
